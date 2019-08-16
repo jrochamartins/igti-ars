@@ -14,4 +14,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\IGTI.PA.Database\IGTI.PA.Database.csproj" />
+    <ProjectReference Include="..\..\IGTI.PA.Entities\IGTI.PA.Entities.csproj" />
+    <ProjectReference Include="..\..\IGTI.PA.UseCases\IGTI.PA.UseCases.csproj" />
+  </ItemGroup>
+
 </Project>

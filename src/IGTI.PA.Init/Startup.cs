@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using IGTI.PA.Database;
+using IGTI.PA.Database.Impl;
+using IGTI.PA.UseCases;
+using IGTI.PA.UseCases.Adapters.Database;
+using IGTI.PA.UseCases.Impl;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace IGTI.PA.Init
 {
@@ -26,6 +24,11 @@ namespace IGTI.PA.Init
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.Configure<DatabaseContextOptions>(Configuration);
+            services.AddSingleton<DatabaseContext>();
+            services.AddScoped<Register, RegisterImpl>();
+            services.AddScoped<ProspectRepository, ProspectRepositoryImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
