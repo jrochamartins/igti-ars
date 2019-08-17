@@ -14,11 +14,7 @@ namespace IGTI.PA.Database.Impl
             _context = context;
         }
 
-        public Prospect Find(string uid)
-        {
-            var collection = _context.Prospects.Find(p => p.Uid == uid);
-            var item = collection.FirstOrDefault();
-            return item;
-        }
+        public Prospect Find(string uid) =>
+            _context.Prospects.Find(p => p.Uid == uid).FirstOrDefault();
     }
 }
