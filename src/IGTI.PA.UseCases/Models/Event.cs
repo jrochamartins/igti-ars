@@ -2,11 +2,20 @@
 {
     public class Event
     {
+
+        private string _eventName;
+
         public string EventName
         {
             get
             {
-                return GetType().Name;
+                if (string.IsNullOrWhiteSpace(_eventName))
+                    return GetType().Name;
+                return _eventName;
+            }
+            set
+            {
+                _eventName = value;
             }
         }
     }

@@ -6,8 +6,7 @@
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
     "IGTI.PA.Init": {
-      "commandName": "Project",
-      "launchUrl": "api/init",
+      "commandName": "Project",      
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DatabaseConnection": "mongodb://localhost",

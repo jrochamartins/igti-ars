@@ -23,8 +23,8 @@ namespace IGTI.PA.Queue
             _channel.QueueDeclare(queue: _options.QueueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
         }
 
-        public void Send(byte[] message) =>
-            _channel.BasicPublish(exchange: "", routingKey: _options.QueueName, basicProperties: null, body: message);
+        public void Send(byte[] message, string exchange = "") =>
+            _channel.BasicPublish(exchange: exchange, routingKey: _options.QueueName, basicProperties: null, body: message);
         
         public EventingBasicConsumer CreateConsumer() =>
             new EventingBasicConsumer(_channel);

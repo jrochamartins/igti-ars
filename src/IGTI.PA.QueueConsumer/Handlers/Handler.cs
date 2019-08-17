@@ -11,27 +11,22 @@ namespace IGTI.PA.QueueConsumer.Handlers
     }
 
     public abstract class Handler<T> : Handler where T : Event
-    {
-        protected readonly IServiceProvider _serviceProvider;
-
-        public Handler(
-            IServiceProvider serviceProvider)
-        {
-            _serviceProvider = serviceProvider;
-        }
-
+    {        
         public abstract void Execute(T payload);
 
         public void Handle(byte[] message)
         {
             try
             {
-                var eventModel = JsonConvert.DeserializeObject<T>(Encoding.UTF8.GetString(message));
-                if (typeof(T).Name == eventModel.EventName)
-                    Execute(eventModel);
+                var body = Encoding.UTF8.GetString(message);
+                if (body.Contains(typeof(T).Name))
+                {
+                    var model = JsonConvert.DeserializeObject<T>(body);
+                    Execute(model);
+                }
             }
             catch
-            {
+            {   
             }
         }
     }

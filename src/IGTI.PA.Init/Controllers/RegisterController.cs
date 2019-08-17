@@ -15,7 +15,6 @@ namespace IGTI.PA.Init.Controllers
             _register = register;
         }
 
-        // POST: api/Register
         [HttpPost]
         public IActionResult Post([FromBody] RegisterModel model)
         {

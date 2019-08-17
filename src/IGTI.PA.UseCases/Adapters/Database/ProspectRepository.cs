@@ -6,5 +6,6 @@ namespace IGTI.PA.UseCases.Adapters.Database
     {
         Prospect Find(string uid);
         void Add(Prospect entity);
+        bool Update(Prospect prospect);
     }
 }

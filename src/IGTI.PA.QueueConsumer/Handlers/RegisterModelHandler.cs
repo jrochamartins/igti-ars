@@ -7,18 +7,20 @@ namespace IGTI.PA.QueueConsumer.Handlers
 {
     public class RegisterModelHandler : Handler<RegisterModel>
     {
-        public RegisterModelHandler(IServiceProvider serviceProvider) : base(serviceProvider)
+        private readonly ProspectRepository _prospectRepository;
+
+        public RegisterModelHandler(
+            IServiceProvider serviceProvider)
         {
+            _prospectRepository = serviceProvider.GetService<ProspectRepository>();
         }
 
         public override void Execute(RegisterModel payload)
         {
-            var prospectRepository = _serviceProvider.GetService<ProspectRepository>();
-
-            var prospect = prospectRepository.Find(payload.Uid);
+            var prospect = _prospectRepository.Find(payload.Uid);
 
             if (prospect is null)
-                prospectRepository.Add(payload);
+                _prospectRepository.Add(payload);
         }
     }
 }
