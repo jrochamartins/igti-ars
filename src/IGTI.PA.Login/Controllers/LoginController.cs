@@ -14,8 +14,8 @@ namespace IGTI.PA.Login.Controllers
             _login = login;
         }
 
-        [HttpPut("{uid}")]
-        public IActionResult Put(string uid, [FromBody] LoginModel model)
+        [HttpPost("{uid}")]
+        public IActionResult Post(string uid, [FromBody] LoginModel model)
         {
             model.Uid = uid;
             _login.Enter(model);
