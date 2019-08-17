@@ -15,10 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\IGTI.PA.Database\IGTI.PA.Database.csproj" />
-    <ProjectReference Include="..\..\IGTI.PA.Entities\IGTI.PA.Entities.csproj" />
-    <ProjectReference Include="..\..\IGTI.PA.UseCases\IGTI.PA.UseCases.csproj" />
+    <ProjectReference Include="..\IGTI.PA.Database\IGTI.PA.Database.csproj" />
+    <ProjectReference Include="..\IGTI.PA.Entities\IGTI.PA.Entities.csproj" />
     <ProjectReference Include="..\IGTI.PA.Queue\IGTI.PA.Queue.csproj" />
+    <ProjectReference Include="..\IGTI.PA.UseCases\IGTI.PA.UseCases.csproj" />
   </ItemGroup>
 
 </Project>
