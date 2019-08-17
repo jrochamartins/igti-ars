@@ -5,7 +5,6 @@ namespace IGTI.PA.UseCases.Impl
 {
     public class RegisterImpl : Register
     {
-
         private readonly ProspectRepository _prospectRepository;
 
         public RegisterImpl(
@@ -18,12 +17,11 @@ namespace IGTI.PA.UseCases.Impl
         {
             var prospect = _prospectRepository.Find(model.Uid);
 
-            if (prospect is null)
-            {
-                return true;
-            }
+            if (!(prospect is null))
+                return false;
 
-            return false;
+            _prospectRepository.Add(model);
+            return true;
         }
     }
 }

@@ -14,7 +14,6 @@ namespace IGTI.PA.Database
         {
             _options = optionsAccessor.CurrentValue;
             _database = DatabaseFactory(_options.DatabaseConnection, _options.DatabaseName);
-            //RegisterClassMap();
         }
 
         internal IMongoCollection<Prospect> Prospects => _database.GetCollection<Prospect>(nameof(Prospects).ToLower());
@@ -26,6 +25,7 @@ namespace IGTI.PA.Database
         //{
         //    BsonClassMap.RegisterClassMap<Prospect>(_ =>
         //    {
+        //        _.SetIgnoreExtraElements(true);
         //        _.AutoMap();
         //    });
         //}

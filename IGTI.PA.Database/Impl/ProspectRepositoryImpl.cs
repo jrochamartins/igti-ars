@@ -16,5 +16,8 @@ namespace IGTI.PA.Database.Impl
 
         public Prospect Find(string uid) =>
             _context.Prospects.Find(p => p.Uid == uid).FirstOrDefault();
+
+        public void Add(Prospect entity) =>
+            _context.Prospects.InsertOne(entity);
     }
 }

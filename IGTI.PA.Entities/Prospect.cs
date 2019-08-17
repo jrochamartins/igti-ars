@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace IGTI.PA.Entities
+﻿namespace IGTI.PA.Entities
 {
-    public class Prospect
+    public class Prospect : Entity
     {
         public string Uid { get; set; }
     }
