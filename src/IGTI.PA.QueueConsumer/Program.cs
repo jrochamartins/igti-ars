@@ -2,9 +2,7 @@
 using IGTI.PA.Database.Impl;
 using IGTI.PA.Queue;
 using IGTI.PA.QueueConsumer.Handlers;
-using IGTI.PA.UseCases;
 using IGTI.PA.UseCases.Adapters.Database;
-using IGTI.PA.UseCases.Impl;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
