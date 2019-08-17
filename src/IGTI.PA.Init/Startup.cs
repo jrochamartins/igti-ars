@@ -1,7 +1,10 @@
 ﻿using IGTI.PA.Database;
 using IGTI.PA.Database.Impl;
+using IGTI.PA.Queue;
+using IGTI.PA.Queue.Impl;
 using IGTI.PA.UseCases;
 using IGTI.PA.UseCases.Adapters.Database;
+using IGTI.PA.UseCases.Adapters.Queue;
 using IGTI.PA.UseCases.Impl;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,7 +29,12 @@ namespace IGTI.PA.Init
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.Configure<DatabaseContextOptions>(Configuration);
+            services.Configure<QueueContextOptions>(Configuration);
+
             services.AddSingleton<DatabaseContext>();
+            services.AddSingleton<QueueContext>();
+
+            services.AddScoped<Producer, ProducerImpl>();
             services.AddScoped<Register, RegisterImpl>();
             services.AddScoped<ProspectRepository, ProspectRepositoryImpl>();
         }

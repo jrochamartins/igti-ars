@@ -1,4 +1,5 @@
 ﻿using IGTI.PA.UseCases.Adapters.Database;
+using IGTI.PA.UseCases.Adapters.Queue;
 using IGTI.PA.UseCases.Models;
 
 namespace IGTI.PA.UseCases.Impl
@@ -6,11 +7,14 @@ namespace IGTI.PA.UseCases.Impl
     public class RegisterImpl : Register
     {
         private readonly ProspectRepository _prospectRepository;
+        private readonly Producer _queueProducer;
 
         public RegisterImpl(
-            ProspectRepository prospectRepository)
+            ProspectRepository prospectRepository,
+            Producer queueProducer)
         {
             _prospectRepository = prospectRepository;
+            _queueProducer = queueProducer;
         }
 
         public bool Create(RegisterModel model)
@@ -20,7 +24,7 @@ namespace IGTI.PA.UseCases.Impl
             if (!(prospect is null))
                 return false;
 
-            _prospectRepository.Add(model);
+            _queueProducer.Send(model);
             return true;
         }
     }
