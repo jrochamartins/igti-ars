@@ -1,7 +1,7 @@
 ﻿using IGTI.PA.UseCases.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IGTI.PA.Login.Controllers
+namespace IGTI.PA.Init.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
