@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "2d5da5cb-1cfe-4da2-9122-d0d8683f02ec",
+		"name": "PA.ARS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1.Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uid\": \"{{uid}}\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/register",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jose Rocha\",\r\n    \"email\": \"jrocha.gm@gmail.com\",\r\n    \"phone\": \"31993075946\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/login/{{uid}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"login",
+						"{{uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.Validate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"code\": \"1111\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/validate/{{uid}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"validate",
+						"{{uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.AccountType",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"accountType\": \"Savings\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/accounttype/{{uid}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"accounttype",
+						"{{uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.Address",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postalCode\": \"33015560\",\r\n    \"addressLineOne\": \"Domingos Macelino de Souza, 312\",\r\n    \"addressLineTwo\": \"Kennedy\",\r\n    \"city\": \"Santa Luzia\",\r\n    \"state\": \"Minas Gerais\",\r\n    \"country\": \"Brasil\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/address/{{uid}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"address",
+						"{{uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.Financial",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"totalPropertyValue\": 250000.0,\r\n    \"currentlyWorking\": true,\r\n    \"company\": \"IGTI\",\r\n    \"position\": \"Teacher\",\r\n    \"earnings\": 15000.0\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/financial/{{uid}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"financial",
+						"{{uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.Review",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/review/{{uid}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"review",
+						"{{uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.ReviewAccept",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"termsCode\": \"7dd2f59e-4bd0-4091-aba1-e055942fbf79\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/review/{{uid}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"review",
+						"{{uid}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
