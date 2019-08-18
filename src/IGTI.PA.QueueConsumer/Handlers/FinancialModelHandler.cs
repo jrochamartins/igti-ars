@@ -5,24 +5,24 @@ using System;
 
 namespace IGTI.PA.QueueConsumer.Handlers
 {
-    public class AddressModelHandler : Handler<AddressModel>
+    public class FinancialModelHandler : Handler<FinancialModel>
     {
         private readonly ProspectRepository _prospectRepository;
 
-        public AddressModelHandler(
+        public FinancialModelHandler(
             IServiceProvider serviceProvider)
         {
             _prospectRepository = serviceProvider.GetService<ProspectRepository>();
         }
 
-        public override void Execute(AddressModel payload)
+        public override void Execute(FinancialModel payload)
         {
             var prospect = _prospectRepository.Find(payload.Uid);
 
             if (prospect is null)
                 return;
 
-            prospect.SetAddress(payload.PostalCode, payload.AddressLineOne, payload.AddressLineTwo, payload.City, payload.State, payload.Country);
+            prospect.SetFinancial(payload.TotalPropertyValue, payload.CurrentlyWorking, payload.Company, payload.Position, payload.Earnings);
             _prospectRepository.Update(prospect);
         }
     }

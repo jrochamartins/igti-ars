@@ -34,14 +34,16 @@ namespace IGTI.PA.QueueConsumer
             {
                 new RegisterModelHandler(serviceProvider),
                 new LoginModelHandler(serviceProvider),
-                new AddressModelHandler(serviceProvider)
+                new AccountTypeModelHandler(serviceProvider),
+                new AddressModelHandler(serviceProvider),
+                new FinancialModelHandler(serviceProvider),
             };
 
             var queueContext = serviceProvider.GetService<QueueContext>();
             var consumer = queueContext.CreateConsumer();
             consumer.Received += (model, ea) =>
             {
-                Console.WriteLine("{0}: Received message.", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+                Console.WriteLine("{0}: Message received.", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
                 foreach (var handler in handlers)
                     handler.Handle(ea.Body);
             };

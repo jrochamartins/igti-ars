@@ -2,6 +2,6 @@
 {
     public class AccountTypeModel : RegisterModel
     {
-        public AccountType AccountType { get; set; }
+        public Entities.AccountType AccountType { get; set; }
     }
 }

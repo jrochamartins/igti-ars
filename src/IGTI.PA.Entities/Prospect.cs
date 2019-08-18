@@ -66,8 +66,8 @@
         }
 
         public void SetFinancial(
-            decimal totalPropertyValue,
-            bool currentlyWorking,
+            decimal? totalPropertyValue,
+            bool? currentlyWorking,
             string company,
             string position,
             decimal? earnings)
