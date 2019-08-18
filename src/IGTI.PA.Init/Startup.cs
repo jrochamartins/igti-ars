@@ -31,6 +31,7 @@ namespace IGTI.PA.Init
             services.Configure<DatabaseContextOptions>(Configuration);
             services.Configure<QueueContextOptions>(Configuration);
 
+            services.AddSingleton<TermsCodeCache, TermsCodeCacheImpl>();
             services.AddSingleton<DatabaseContext>();
             services.AddSingleton<QueueContext>();
 
@@ -43,6 +44,7 @@ namespace IGTI.PA.Init
             services.AddScoped<AccountType, AccountTypeImpl>();
             services.AddScoped<Address, AddressImpl>();
             services.AddScoped<Financial, FinancialImpl>();
+            services.AddScoped<Review, ReviewImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -37,6 +37,7 @@ namespace IGTI.PA.QueueConsumer
                 new AccountTypeModelHandler(serviceProvider),
                 new AddressModelHandler(serviceProvider),
                 new FinancialModelHandler(serviceProvider),
+                new ReviewAcceptModelHandler(serviceProvider),
             };
 
             var queueContext = serviceProvider.GetService<QueueContext>();

@@ -1,4 +1,6 @@
-﻿namespace IGTI.PA.Entities
+﻿using System;
+
+namespace IGTI.PA.Entities
 {
     public class Prospect : Entity
     {
@@ -24,6 +26,8 @@
         public string Company { get; set; }
         public string Position { get; set; }
         public decimal? Earnings { get; set; }
+
+        public DateTime? FinishDate { get; set; }
 
         private void SetStep(Steps step)
         {
@@ -78,6 +82,12 @@
             Position = position;
             Earnings = earnings;
             SetStep(Steps.Financial);
+        }
+
+        public void SetFinish()
+        {
+            FinishDate = DateTime.UtcNow;
+            SetStep(Steps.Analysis);
         }
     }
 }
