@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.UseCases", "2.UseCases", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Frameworks", "3.Frameworks", "{DD995D36-6D6A-4909-A164-14A8D2D3E40B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2.Apis", "3.2.Apis", "{4BA95677-E30D-4FFE-AAE1-A5CE56AB9FD6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.3.APIs", "3.3.APIs", "{4BA95677-E30D-4FFE-AAE1-A5CE56AB9FD6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1.Drivers", "3.1.Drivers", "{41F2B0C3-366E-4119-9756-98B2EE670301}"
 EndProject
@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{2B09
 		scripts\setup.bat = scripts\setup.bat
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.3.QueueConsumer", "3.3.QueueConsumer", "{DFD1E4A0-02FB-4BD4-83BC-3A259F0B0504}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2.QueueConsumer", "3.2.QueueConsumer", "{DFD1E4A0-02FB-4BD4-83BC-3A259F0B0504}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IGTI.PA.QueueConsumer", "src\IGTI.PA.QueueConsumer\IGTI.PA.QueueConsumer.csproj", "{DD0E278A-3AD0-453E-BE68-5AF8FCB184BB}"
 EndProject

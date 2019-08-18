@@ -40,6 +40,7 @@ namespace IGTI.PA.Init
             services.AddScoped<Register, RegisterImpl>();
             services.AddScoped<Login, LoginImpl>();
             services.AddScoped<Validate, ValidateImpl>();
+            services.AddScoped<Address, AddressImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

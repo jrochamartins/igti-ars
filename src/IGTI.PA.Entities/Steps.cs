@@ -4,5 +4,6 @@
     {
         Register,
         Login,
+        Address,
     }
 }

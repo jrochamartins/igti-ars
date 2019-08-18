@@ -33,7 +33,8 @@ namespace IGTI.PA.QueueConsumer
             var handlers = new Collection<Handler>
             {
                 new RegisterModelHandler(serviceProvider),
-                new LoginModelHandler(serviceProvider)
+                new LoginModelHandler(serviceProvider),
+                new AddressModelHandler(serviceProvider)
             };
 
             var queueContext = serviceProvider.GetService<QueueContext>();
