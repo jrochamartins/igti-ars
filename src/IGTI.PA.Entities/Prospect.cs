@@ -10,12 +10,20 @@
         public string Email { get; set; }
         public string Phone { get; set; }
 
+        public AccountType AccountType { get; set; }
+
         public string PostalCode { get; set; }
         public string AddressLineOne { get; set; }
         public string AddressLineTwo { get; set; }
         public string City { get; set; }
         public string State { get; set; }
         public string Country { get; set; }
+
+        public decimal? TotalPropertyValue { get; set; }
+        public bool? CurrentlyWorking { get; set; }
+        public string Company { get; set; }
+        public string Position { get; set; }
+        public decimal? Earnings { get; set; }
 
         private void SetStep(Steps step)
         {
@@ -34,6 +42,12 @@
             SetStep(Steps.Login);
         }
 
+        public void SetAccountType(AccountType accountType)
+        {
+            AccountType = accountType;
+            SetStep(Steps.AccountType);
+        }
+
         public void SetAddress(
             string postalCode,
             string addressLineOne,
@@ -49,6 +63,21 @@
             State = state;
             Country = country;
             SetStep(Steps.Address);
+        }
+
+        public void SetFinancial(
+            decimal totalPropertyValue,
+            bool currentlyWorking,
+            string company,
+            string position,
+            decimal? earnings)
+        {
+            TotalPropertyValue = totalPropertyValue;
+            CurrentlyWorking = currentlyWorking;
+            Company = company;
+            Position = position;
+            Earnings = earnings;
+            SetStep(Steps.Financial);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace IGTI.PA.Init.Controllers
         }
 
         [HttpPut("{uid}")]
-        public IActionResult Post(string uid, [FromBody] AddressModel model)
+        public IActionResult Put(string uid, [FromBody] AddressModel model)
         {
             model.Uid = uid;
             _address.Update(model);

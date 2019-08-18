@@ -4,6 +4,9 @@
     {
         Register,
         Login,
+        AccountType,
         Address,
+        Financial,
+        Analysis
     }
 }
