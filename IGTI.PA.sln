@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1.Drivers", "3.1.Drivers"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{2B09F40C-1A4C-4CDB-890D-438DA0A054C7}"
 	ProjectSection(SolutionItems) = preProject
-		scripts\setup.bat = scripts\setup.bat
+		scripts\setup.txt = scripts\setup.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2.QueueConsumer", "3.2.QueueConsumer", "{DFD1E4A0-02FB-4BD4-83BC-3A259F0B0504}"
