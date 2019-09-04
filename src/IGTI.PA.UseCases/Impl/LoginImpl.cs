@@ -14,7 +14,7 @@ namespace IGTI.PA.UseCases.Impl
         }
 
         public void Enter(LoginModel model)
-        {  
+        {
             //TODO: Sends email and/or sms with access code
             _queueProducer.Send(model);
         }

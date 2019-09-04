@@ -4,8 +4,8 @@
       "commandName": "Project",
       "environmentVariables": {
         "DatabaseConnection": "mongodb://localhost",
-        "QueueHostName": "localhost",
         "DatabaseName": "PA-ARS",
+        "QueueHostName": "localhost",
         "QueueName": "Events"
       }
     }

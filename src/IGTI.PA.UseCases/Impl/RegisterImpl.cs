@@ -1,5 +1,4 @@
 ﻿using IGTI.PA.UseCases.Adapters.Database;
-using IGTI.PA.UseCases.Adapters.Queue;
 using IGTI.PA.UseCases.Models;
 
 namespace IGTI.PA.UseCases.Impl

@@ -25,7 +25,7 @@ namespace IGTI.PA.Queue
 
         public void Send(byte[] message, string exchange = "") =>
             _channel.BasicPublish(exchange: exchange, routingKey: _options.QueueName, basicProperties: null, body: message);
-        
+
         public EventingBasicConsumer CreateConsumer() =>
             new EventingBasicConsumer(_channel);
 

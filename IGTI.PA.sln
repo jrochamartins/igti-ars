@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1.Drivers", "3.1.Drivers"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{2B09F40C-1A4C-4CDB-890D-438DA0A054C7}"
 	ProjectSection(SolutionItems) = preProject
+		scripts\docker-compose.yaml = scripts\docker-compose.yaml
 		scripts\setup.txt = scripts\setup.txt
 	EndProjectSection
 EndProject

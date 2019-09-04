@@ -1,6 +1,5 @@
 ﻿using IGTI.PA.UseCases.Models;
 using Newtonsoft.Json;
-using System;
 using System.Text;
 
 namespace IGTI.PA.QueueConsumer.Handlers
@@ -11,7 +10,7 @@ namespace IGTI.PA.QueueConsumer.Handlers
     }
 
     public abstract class Handler<T> : Handler where T : Event
-    {        
+    {
         public abstract void Execute(T payload);
 
         public void Handle(byte[] message)
@@ -26,7 +25,7 @@ namespace IGTI.PA.QueueConsumer.Handlers
                 }
             }
             catch
-            {   
+            {
             }
         }
     }
